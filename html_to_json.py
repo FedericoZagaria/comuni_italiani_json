@@ -51,8 +51,8 @@ class MyHTMLParser(HTMLParser):
             fillTownDictionary(data)
 
 parser = MyHTMLParser()
-filehtml = open('D:\Desktop\progetti\proveJson\Dipartimento_per_gli_Affari_Interni_e_Territoriali.html','r')
+filehtml = open('D:\Dipartimento_per_gli_Affari_Interni_e_Territoriali.html','r')
 parser.feed(filehtml.read())
-with open("D:\Desktop\progetti\proveJson\comuni.json", "a") as outfile:
+with open("D:\codici_comuni_italiani.json", "a") as outfile:
     json.dump(listDictionary, outfile, indent=4, )
 
