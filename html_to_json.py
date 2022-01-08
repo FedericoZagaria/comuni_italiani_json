@@ -53,6 +53,6 @@ class MyHTMLParser(HTMLParser):
 parser = MyHTMLParser()
 filehtml = open('D:\Dipartimento_per_gli_Affari_Interni_e_Territoriali.html','r')
 parser.feed(filehtml.read())
-with open("D:\codici_comuni_italiani.json", "a") as outfile:
+with open("D:\codici_comuni_italiani.json", "w") as outfile:
     json.dump(listDictionary, outfile, indent=4, )
 
